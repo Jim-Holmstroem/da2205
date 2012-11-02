@@ -1,8 +1,10 @@
+FILE = exercise3
+
 all:
-	pdflatex exercise2.tex
+	pdflatex ${FILE}.tex
 
 run:
-	evince exercise2.pdf
+	evince ${FILE}.pdf
 
 clean:
 	rm -f *.toc *.aux *.log *.out *.pdf
