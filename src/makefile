@@ -1,4 +1,4 @@
-FILE = exercise3
+FILE = exercise1
 
 all:
 	pdflatex ${FILE}.tex
