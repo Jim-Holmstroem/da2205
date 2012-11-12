@@ -1,4 +1,4 @@
-FILE = exercise3
+FILE = final_assignment
 
 all:
 	pdflatex ${FILE}.tex
