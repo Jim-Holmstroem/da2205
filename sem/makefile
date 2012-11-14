@@ -1,4 +1,4 @@
-FILE = sem2
+FILE = sem3
 
 all:
 	pdflatex ${FILE}.tex
