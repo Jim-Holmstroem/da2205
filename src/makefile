@@ -6,5 +6,8 @@ all:
 run:
 	evince ${FILE}.pdf
 
+wc:
+	wc -w ${FILE}.tex
+
 clean:
 	rm -f *.toc *.aux *.log *.out *.pdf
