@@ -12,12 +12,12 @@
     This essay will be focusing on the hardware limitations
     and the possibilities of machine learning.
 
-
-%
 % outline it in this order: (also check which statements/thoughts are mine vs.
 % from the paper) remember to always have backup references.
 %   
 %   Hardware Limitations
+%       Introduction: Hardware isn't really catching up with what we want to
+%       compute, the clock speed and memory bandwidth and such has stagnated 
 %       Multicore CPU's
 %       Distributed data/compute systems, both colaborative clusters as well as
 %       supercomputers.(manycores that is computers running on 100core+).
@@ -25,7 +25,8 @@
 %               Folding@home
 %           data
 %               ?
-%           
+%       (but the efficient can be as low as 1% <ref>)
+%       But this is still not optimal for machine learning.
 %       New non-von neumann<ref:?> architecture
 %           Look at GPGPU (general purpose computing on graphics processing unit)
 %               -A "new" hardware which focuses more and data throughput<ref:>
@@ -33,14 +34,14 @@
 %                CPU.(just check the examples out, don't link this: http://www.accelereyes.com/examples/case_studies)
 %               -How many top500 computers are running with GPU's?
 %           Non-perfect calculations <ref:?>
-%           Neural processors <ref:Synaptic>
+%           Neural processors <ref:Synaptic> would be optimal at least for the
+%           algorithms simulating neural networks (examples of algorithms)
 %      
 %       New hardware => new algorithms
 %           Clusters
 %           For Map-reduce<ref>
 %           Hadoop with mahong (machine learning algorithms implemented (and
-%           redesigned) to run effectively on
-%           clusters)
+%           redesigned) to run effectively on clusters)
 %
 %   Artificial Scientist
 %       Autonomous experimentation
@@ -61,7 +62,6 @@
 %
 %
 <<<<<<<MERGE>>>>>>>>>>>>
-
     Super scalability
     * Hardware isn't really catching up with the datasets, clock speed and
     memory bandwidth has
@@ -77,15 +77,10 @@
     * Non-perfect hardware: many calculations need not to be perfect to be able
     to operate and some research into this has been done: //REF
 
-
 <<<<<<<<<<<<>>>>>>>>>>>>
-
-
 
 \section{The dawn of new hardware}
 
-    
-        
 
 \section{A new breed of scientists}
 
