@@ -18,12 +18,94 @@ needed to get there''}
     the article ``Towards 2020 Science'' by Microsoft Research.\cite{ms2020}
 
     It seems that we are currently standing even closer to the brink of a new 
-    computer revolution. New techniques are starting to be developed and set
-    into production to
-    overcome new types of hinders of computing power. This hinder is is
-    nowadays much more focused on how to actual distribute the computations
-    since the actual smallest computing unit is starting to hit the so called
-    heat wall.
+    computer revolution. New machine learning techniques are starting to be 
+    developed and set off into production. This among other things results in
+    the need of getting massive amounts of computing power.
+    This hinder is nowadays much more focused on how to 
+    distribute the computations
+    since the performance of a single computing unit is starting to 
+    hit the so called
+    heat wall.\cite{ms2020}
+
+    SUMMARY ON ARTIFICIAL SCIENTIST 
+
+\section{The dawn of new hard- and software}
+    
+    Hardware hasn't really been catching up lately with the dataset and algorithms
+    being used in modern machine learning, basically the more the merrier when it comes
+    to processing power in machine learning. This is mostly due to that the
+    increase in clock speed and memory bandwidth has stagnated for physical
+    reasons.
+    
+    There is only two solutions to this basic problem to overcome the
+    bottleneck and that is to go around it; either by using more cores working in
+    parallel or changing the processor architecture.
+
+    Running code on multiple CPU's creates new types of .. 
+    cachelock
+    changing the algorithms (this is actually an issue with all new types of
+    hardware)
+
+    A new hardware that has gained much popularity for general processing is
+    GPU's. <what makes them better in many cases?> 
+    Libraries dealing with GPGPU has been released not long after the
+    article\cite{ms2020} had been released just as they predicted.
+
+    One must not forget the importance of actually having good API's for
+    things...
+
+
+
+    
+
+
+    
+    There is only two solutions to overcome this performance flaskhals from the
+    core either you put many of them in parallel and try to split the
+    computations among them or you change the processor arcitecture to better
+    fit the needs.
+
+
+
+    Since the dawn of computers the processors has been of von nuemann type
+
+
+    Super scalability
+    * Hardware isn't really catching up with the datasets, clock speed and
+    memory bandwidth has
+    stagnated and the only way to increase the computing power is to increase
+    the number of cores or change the underlying architecture (as in GPU) but 
+    this introduces a lot of new problems one has to re-implement all
+    algorithms for the new setup efficiently which is non trivial in many
+    cases. Mention cache-locks and
+
+    * Hadoop (with Mahong ofc) is the most widely used framework for
+    distributed processing on immense datasets across a cluster. 
+
+    * Non-perfect hardware: many calculations need not to be perfect to be able
+    to operate and some research into this has been done: //REF
+
+\section{A new breed of scientists}
+    Artificial Scientist: 
+    * Use algorithms with active learning on real life experiments for example the
+    microfluid one.
+    * Use an artificial scientist to improve the artificial scientist, OMFG
+
+    * Hardware is a bit  behind, need neurla processors or processors which do
+    errors but the algorithms are errorcorrecting initself, which is closer to
+    neuralprocessing in the neuronnets.
+    * also need other ways of thinking dealing with massive-parallel, refer to
+    bigdata-eventguy which had had the new parallel-databse idea. Most
+    machinelearning algorithms is non-sequencial(is it called this?) but separating
+    the problem in a map-reduce fasion isn't always trivial.
+    * An important piece of the puzzle is to get machinelearning to be scaleable in
+    deeplearning(is this correct usage of deeplearning?) so that we don't have to
+    generate features byhand but instead have raw input with minimal preprocessing
+    (perhaps only log-scaling some raw input you know have a exponential behavour.
+
+    * Or redesigning the hardware it is running on to be optimal to .. (recursive
+    call)
+
 
 % outline it in this order: (also check which statements/thoughts are mine vs.
 % from the paper) remember to always have backup references.
@@ -77,44 +159,6 @@ needed to get there''}
 %       http://www.nature.com/nature/focus/futurecomputing/
 %
 %
-
-\section{The dawn of new hardware}
-    Super scalability
-    * Hardware isn't really catching up with the datasets, clock speed and
-    memory bandwidth has
-    stagnated and the only way to increase the computing power is to increase
-    the number of cores or change the underlying architecture (as in GPU) but 
-    this introduces a lot of new problems one has to re-implement all
-    algorithms for the new setup efficiently which is non trivial in many
-    cases. Mention cache-locks and
-
-    * Hadoop (with Mahong ofc) is the most widely used framework for
-    distributed processing on immense datasets across a cluster. 
-
-    * Non-perfect hardware: many calculations need not to be perfect to be able
-    to operate and some research into this has been done: //REF
-
-\section{A new breed of scientists}
-    Artificial Scientist: 
-    * Use algorithms with active learning on real life experiments for example the
-    microfluid one.
-    * Use an artificial scientist to improve the artificial scientist, OMFG
-
-    * Hardware is a bit  behind, need neurla processors or processors which do
-    errors but the algorithms are errorcorrecting initself, which is closer to
-    neuralprocessing in the neuronnets.
-    * also need other ways of thinking dealing with massive-parallel, refer to
-    bigdata-eventguy which had had the new parallel-databse idea. Most
-    machinelearning algorithms is non-sequencial(is it called this?) but separating
-    the problem in a map-reduce fasion isn't always trivial.
-    * An important piece of the puzzle is to get machinelearning to be scaleable in
-    deeplearning(is this correct usage of deeplearning?) so that we don't have to
-    generate features byhand but instead have raw input with minimal preprocessing
-    (perhaps only log-scaling some raw input you know have a exponential behavour.
-
-    * Or redesigning the hardware it is running on to be optimal to .. (recursive
-    call)
-
 \bibliographystyle{plain}
 \bibliography{refs}
 
