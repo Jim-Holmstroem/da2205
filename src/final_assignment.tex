@@ -33,23 +33,23 @@ needed paradigm shift''}
 
 \section{The dawn of new hardware}
     The current processing capabilities for computers has degraded to a
-    sub-exponential growth lately which is starting to have consecenses on
-    restricting some algorithms as well as setting limits 
+    sub-exponential growth lately which is starting to have consecenses such as 
+    restricting the use of some algorithms as well as setting limits 
     to the processible size of datasets.
     The sub-exponential growth in computing has been a historical indicator
     that a new paradigm is on it's way or at least much
-    needed.<ref:the_five_paradigm_changes_in_computing>
+    needed.%<ref the_five_paradigm_changes_in_computing>
     
     The issue with most current systems is their heavy and naive use of the von
     Neumann architecture. Basically the throughput for the types of processor
-    has started to reach, for physical reasons, the end of the line 
+    has started to reach, for physical reasons, the end of the line in
     performance.
 
     The duck-tape solution<ref:amd> to this has been keeping the von Neumann
-    architecture and just throw in more cores in parallel.
+    architecture and just throw in more cores and more machines in parallel.
     This might work well in some big-data applications where the problems is easily
     map-reduceable<ref?> but perform really badly in many other problems. Also
-    this scaling becomes very space exhaustive since you have the need for
+    this scaling becomes very space and power exhaustive since you have the need for
     cooling of all the cores.
 
     The other type of solution is to drop the overused von Neumann architecture
@@ -61,19 +61,41 @@ needed paradigm shift''}
     (GPU) for general computing that is problems with non graphical nature like
     solving differential equations or FFT. High end GPU's nowadays have around
     500? stream? processors in parallel which can perform one type of operation
-    at a time on 500 element chunk of the data in parallel, this together with that they
-    only read from a read-only memory and that all the buses are separated for
-    maximum throughput they can scale almost linearly on the number of cores
-    which ordinary CPU's almost never manages.\footnote{This is mostly because
-    a effect called write?-lock.}
+    at a time on 500-element-chunk of the data in parallel, this together with that they
+    only read from a read-only memory, which removes the problem of write?-locks , and that all the buses are separated for
+    maximum throughput they can in many cases  scale almost linearly 
+    on the number of cores
+    which ordinary CPU's almost never manages.
 
-    Both scaling up with ordinary CPU's into clusters and 
+    Both scaling up with ordinary CPU's into multi or manycore as well as
+    general processing on GPU's requires new libraries
 
-
+    In the manycore case one solution instead of the classical object oriented
+    programming use a pure functional programming as
+    for example the language Haskell.%ref companies dealing with large data
+    %that has choosed functional programming over object oriented.
+    since the pure functional languages 
+    have inherited properties like lacking states which is the bigest bandit in
+    the write?-lock %ref write lock
+    bottleneck as well lacking execution order which makes it trivial to make a
+    program run in parallel.
 
     Neural Processing Unit (NPU)
 
+    Using neural processing units also requires a new programming paradigm to
+    operate, not much information on the SyNAPSE NPU nor the development tools
+    have been released but I can speculate that it would need some variant of
+    logical- or perhaps functional programming.
+
 \section{A new breed of scientists}
+    The need of new hardware becomes really apperant both in
+    theory and practice when trying to create a general intelligence.
+    A few really recent and in many ways successful tries has been made
+    like for example: Google's unsupervised catdetector %REF catdetector
+    %IBM simulation Synapse (distinguish this with the NPU Synapse)
+    These tries has been run on large clusters blabla but would gain a
+    significant effeciency boost being run on more natural habitat namely the
+    NPU which is more like the 
 
 
 \section{Summary} %state what book and what part I focused on
