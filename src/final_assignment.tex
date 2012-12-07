@@ -31,6 +31,28 @@ needed paradigm shift to get there''}
 
 
 \section{Summary}
+    This essay will be focusing on the current software and hardware limitations
+    towards the development of new machine learning techniques a specially the
+    artificial scientist. Much of the claims and discussions will be based on
+    the article ``Towards 2020 Science'' from Microsoft Research.\cite{ms2020}
+
+    It seems that we are currently standing even closer to the brink of a new 
+    computer revolution. New machine learning techniques are starting to be 
+    developed and set off into production. At least two big companies I have been working
+    with, Ericcson and Oracle, are starting to consider using machine learning
+    for tasks like for example abnormality detection for inhumanly complex
+    systems with multiple soft
+    states, classify the different states or different automatic utilities for
+    testing software. This among other things results in
+    the need of getting massive amounts of computing power.
+    This hinder is nowadays much more focused on how to 
+    distribute the computations to more computation units or sometimes use
+    graphic cards but this is not a long time solution. We basically need a new
+    computation paradigm for machine learning to get as good as human
+    performance in problems like object recognition or planing.
+
+%    SUMMARY ON ARTIFICIAL SCIENTIST 
+
 
 \section{The dawn of new hardware}
     The current processing capabilities for computers has lately degraded to a
@@ -77,37 +99,40 @@ needed paradigm shift to get there''}
 
     One possible solution instead of the old classical object oriented
     programming mostly used today would be to use a pure functional programming
-    language as
-    for example Haskell. Some companies in need of massive processing power has
-    already conformed to this.
+    language such as
+    for example Haskell. Some data driven companies has
+    already conformed to this and are using it as their main language.
     \footnote{
         \href{http://www.janestreet.com}{Jane Street},
         \href{http://www.ericsson.com}{Ericsson},
         \href{http://www.campanja.com}{Campanja},
     }
-    since the pure functional languages 
-    have inherited properties like lacking state 
+    The inherited properties that makes functional programming languages 
+    preferable is for example the lack of state 
     which makes it lack execution order which in turn makes it
-    trivial to convert it 
-    to run it in parallel, since it already run in parallel
-    semantically.
+    trivial to convert it to run it in parallel, since it already run in parallel
+    semantically. Both also the extremely high level of the language with
+    compositions and higher order functions built-in.\cite{haskell}
 
     But I still think that an entirely new to be developed even if the GPU
     solves many of the problems.
     
-    Probably the easiest way trying to imitate human behavior is to actually
-    imitate human processing. A new paradigm that has emerged is neumorphic
+    Probably the easiest way trying to imitate human behavior, which in many
+    cases outperforms computers, is to actually
+    imitate human processing. A new paradigm that has recently emerged is neuromorphic
     computing which basically tries to mimic neural functions with electronics.
     
     The freshest and most promising according to me is the 
     neural processing unit (NPU) which both IBM\cite{synapse} and
-    Intel\cite{intelneuro} are developing. Both the approaches avoids being a
-    monstrous VHDL-logic chip.
+    Intel\cite{intelneuro} are starting develop. Both the approaches avoids being
+    just a monstrous special purpose VHDL-logic chip and can thus be thought of
+    as a new paradigm over neuromorphic computing.
 
-    The usage of a NPU also requires a new programming paradigm to
+    Just as for GPGPU's the usage of a NPU's requires a new programming paradigm to
     operate, not much information on the NPU's nor their development tools
     have been released but I can speculate that it would require some variant of
-    logical- or functional programming.
+    logical- or functional programming. Also the algorithms that fits into the
+    NPU's needs to be greatly rewritten.
     
     Another rather new and interesting neumorphic device is the
     dynamic vision sensor (DVS) which basically has asynchronous event based
@@ -116,8 +141,16 @@ needed paradigm shift to get there''}
     being really fast without using large bandwidth nor much power.
 
     In addition to all this some more radical improvements in learning
-    algorithms has to be made
-    Dropout \cite{dropout}
+    algorithms has to be made as well. A very recent shift towards deep
+    learning algorithms in the machine learning community that probably can be
+    described as a paradigm shift. 
+   
+    Much of the recent success in deep learning is due to the new found computing
+    power from 
+    GPU's as I mentioned before as well as a new look on deep learning. A great
+    example the later is dropout algorithm on deep networks which not only
+    outperforms the rest on the podium but also is much less ad hoc by
+    basically only log some of the features.\cite{dropout}
 
 \section{A new breed of scientists}
     The need of new hardware becomes really apperant both in
@@ -130,23 +163,6 @@ needed paradigm shift to get there''}
     NPU. 
 
 \section{Summary} %state what book and what part I focused on
-
-    This essay will be focusing on the current software and hardware limitations
-    towards the development of new machine learning techniques a specially the
-    artificial scientist. Much of the claims and discussions will be based on
-    the article ``Towards 2020 Science'' from Microsoft Research.\cite{ms2020}
-
-%    It seems that we are currently standing even closer to the brink of a new 
-%    computer revolution. New machine learning techniques are starting to be 
-%    developed and set off into production. This among other things results in
-%    the need of getting massive amounts of computing power.
-%    This hinder is nowadays much more focused on how to 
-%    distribute the computations
-%    since the performance of a single computing unit is starting to 
-%    hit the so called
-%    heat wall.\cite{ms2020}
-
-%    SUMMARY ON ARTIFICIAL SCIENTIST 
 
 \section{The dawn of new hardware}
 
