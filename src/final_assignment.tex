@@ -60,33 +60,49 @@ needed paradigm shift to get there''}
     \footnote{1 and 2 years before the official 
     announcement of CUDA resp. openCL.} 
     the use of graphical processing units
-    (GPU) for general computing that is problems with non graphical nature like
+    (GPU) for general computing (GPGPU) that is problems with non graphical nature like
     solving differential equations or FFT. High end GPU's nowadays have around
     1500 stream processors in parallel which can perform one type of operation
     (kernel)
     on a 1500-element-chunk of the data in parallel at a time. This together
     with that use 
-    of a read-only memory which removes the problem of write?-locks , and that all the buses are separated for
+    of a read-only memory which removes the problem of locks
+    and that all the buses are separated for
     maximum throughput they can in many cases  scale almost linearly 
     on the number of cores
     which ordinary CPU's almost never manages.
 
-    Both scaling up with ordinary CPU's into multi or manycore as well as
-    general processing on GPU's requires new libraries
+    Both scaling up with ordinary CPU's into multi- or manycore as well as
+    GPGPU requires new libraries utilizing new programming paradigms.
 
-    In the manycore case one solution instead of the classical object oriented
-    programming use a pure functional programming as
-    for example the language Haskell.%ref companies dealing with large data
-    %that has choosed functional programming over object oriented.
+    One possible solution instead of the old classical object oriented
+    programming mostly used today would be to use a pure functional programming
+    language as
+    for example Haskell. Some companies in need of massive processing power has
+    already conformed to this.
+    \footnote{
+        \href{http://www.janestreet.com}{Jane Street},
+        \href{http://www.ericsson.com}{Ericsson},
+        \href{http://www.campanja.com}{Campanja},
+    }
     since the pure functional languages 
-    have inherited properties like lacking states which is the bigest bandit in
-    the write?-lock %ref write lock
-    bottleneck as well lacking execution order which makes it trivial to make a
-    program run in parallel.
+    have inherited properties like lacking state 
+    which makes it lack execution order which in turn makes it
+    trivial to convert it 
+    to run it in parallel, since it already run in parallel
+    semantically.
 
-    Neural Processing Unit (NPU)
+    But I still think that an entirely new to be developed even if the GPU
+    solves many of the problems.
+    
+    Probably the easiest way trying to imitate human behavior is to actually
+    imitate human processing. A new paradigm that has emerged is neumorphic
+    computing which basically tries to mimic neural functions with electronics.
+    
+    The freshest and most promising according to me is the 
+    Neural processing unit (NPU)
 
-    Using neural processing units also requires a new programming paradigm to
+    The usage of a NPU also requires a new programming paradigm to
     operate, not much information on the SyNAPSE NPU nor the development tools
     have been released but I can speculate that it would need some variant of
     logical- or perhaps functional programming.
@@ -124,8 +140,6 @@ needed paradigm shift to get there''}
 %    heat wall.\cite{ms2020}
 
 %    SUMMARY ON ARTIFICIAL SCIENTIST 
-
-GPU Which is compared to a von neumann processor much more focused on throughput.
 
 \section{The dawn of new hardware}
 
