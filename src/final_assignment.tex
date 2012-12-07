@@ -37,22 +37,22 @@ needed paradigm shift to get there''}
     sub-exponential growth which is starting to have consequences such as 
     restricting the use of some algorithms as well as setting limits 
     to the processable size of datasets.
-    The sub-exponential growth in computing has been a historical indicator
+    This sub-exponential growth in computing has been a historical indicator
     that a new paradigm is on it's way which should be the case this time as
-    well or at least a indicator on need.%<ref the_five_paradigm_changes_in_computing>
+    well or at least there is a need for one.%<ref the_five_paradigm_changes_in_computing>
     
-    The issue with most current hardware systems is their heavy and naive use of the von
+    The issue with most current hardware systems is their heavy and na\"{i}ve use of the von
     Neumann architecture. Basically the throughput for this types of processor
     has started to reach, for physical reasons, the end of the line 
     performance wise.
 
-    The duck-tape solution<ref:amd> to this has been keeping the von Neumann
-    architecture and just throw in more cores and more machines in parallel.
-    This might work well in some big-data applications where the problems is easily
-    map-reduceable<ref?> but perform really badly in many other problems. Also
+    The duck-tape solution to this has been keeping the von Neumann
+    architecture, with it's limiting bandwidth, and just throw in more cores and/or more machines in parallel.
+    This might work well in some big data applications where the problems is easily
+    map-reducible but perform really badly in many other
+    problems.\cite{mapreduce} Also
     this scaling becomes very space and power exhaustive since you have the need for
-    cooling of all the cores. <ref
-    http://www.gotw.ca/publications/concurrency-ddj.htm>
+    cooling of all the cores. 
 
     The other type of solution is to drop the overused von Neumann architecture
     and go for something that is much more throughput oriented. In the 2020
@@ -62,9 +62,11 @@ needed paradigm shift to get there''}
     the use of graphical processing units
     (GPU) for general computing that is problems with non graphical nature like
     solving differential equations or FFT. High end GPU's nowadays have around
-    500? stream? processors in parallel which can perform one type of operation
-    at a time on 500-element-chunk of the data in parallel, this together with that they
-    only read from a read-only memory, which removes the problem of write?-locks , and that all the buses are separated for
+    1500 stream processors in parallel which can perform one type of operation
+    (kernel)
+    on a 1500-element-chunk of the data in parallel at a time. This together
+    with that use 
+    of a read-only memory which removes the problem of write?-locks , and that all the buses are separated for
     maximum throughput they can in many cases  scale almost linearly 
     on the number of cores
     which ordinary CPU's almost never manages.
@@ -329,7 +331,7 @@ physical world for the first time on a large scale."
 %       http://www.nature.com/nature/focus/futurecomputing/
 %
 
-\bibliographystyle{plain}
-\bibliography{refs}
+    \bibliographystyle{plain}
+    \bibliography{refs}
 
 \end{document}
