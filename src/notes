@@ -1,0 +1,221 @@
+%"To pass the course you must complete one of the following assignments. For the
+%essay submission (~2300 words) remember you will have to support your claims
+%with relevant references etc. Also these essays will be made available to other
+%members of the course. Remember the intended audience for your reports is the
+%other master students in the class."
+%"Read the document Towards Science 2020 and write and summarize the findings and
+%conclusions in relation to one of the fields they have focused on. Do you agree
+%with their conclusions? Are you excited by them? .... "
+%
+% >>A new bread of scientists
+% >The realization of an artificial scientist will most certainly not be possible
+% without a paradigm shift in hardware
+% 
+% * Let it deal with abstract computer science or algebra problems (have
+% already been done somewhat) 
+% * Connect IO to the real world
+% * Connect the machine to itself -> singularity
+
+\section{The dawn of new hardware}
+
+    Hardware hasn't really been catching up lately with the dataset and algorithms
+    being used in modern machine learning, basically the more the merrier when it comes
+    to processing power in machine learning. This is mostly due to that the
+    increase in clock speed and memory bandwidth has stagnated for physical
+    reasons.
+    
+    In my own experience I see a need for most programs being written at
+    a higher abstraction level, for example most forloop constructions can be
+    replaced higher order operations like map/reduce.<ref> 
+
+    There is only two solutions to this basic problem to overcome the
+    bottleneck and that is to go around it; either by using more cores working in
+    parallel or changing the processor architecture.
+
+    Running code on multiple CPU's creates new types of .. 
+    cachelock
+    changing the algorithms (this is actually an issue with all new types of
+    hardware)
+
+    A new hardware that has gained much popularity for general processing is
+    GPU's. <what makes them better in many cases?> 
+    Libraries dealing with GPGPU has been released not long after the
+    article\cite{ms2020} had been released just as they predicted.
+
+    One must not forget the importance of actually having good API's for
+    things...
+
+evolutionary (ie selflearning) processes has exponential growth.. <REF>
+
+continuieng the moors law we need to have a new paradigm
+each time in history when a paradigm is starting to hit a brick wall and
+moores law slowed down there would popup a new one
+
+since the dawn of computation we have basically had exponential speed through
+five different paradigms
+
+Recent development in these areas has created a need for something more the
+just a massive number cruncher. We would like something that basically works
+more like a brain. With basic tasks as recognizing objects or learn from
+experience.
+\cite{synapse}
+
+"neurosynaptic computing chips" 
+"capable of "rewriting"its connections as it
+encounters new information."
+SyNAPSE processor
+
+"the project will also increase our understanding of neurology -- specially how
+cognition works in people."
+
+This new type of computer could possible be perfect for sense,perceive,interact
+and recognize which is basically the hardest main ingredient for artificial
+scientists to do intelligently.
+
+"Making all this possible is a paradigm shift in the way that we think about
+computing and computing architecture."
+
+The basics is that we need to decentralize computing, distribute the components
+to be better for parallelization.
+
+Even if it's a dead-end it will most defently set a spark to develop new
+hardware paradigms.
+
+>>>> write about the paradigms shifts in computing
+http://www.tomshardware.com/news/moores-law-multicore-serial-parallel-programming,10324.html
+
+"As processors and memory grow ever faster, it's becoming more difficult for
+the bus to handle the throughput. Our brain don't have that problem."
+cognitive computing chip
+we basically need to "bypass von Neumann architecture"
+
+%=============================================================
+    %http://www.youtube.com/watch?v=BnTUOEwOKYA
+    "So I think there is a great architectural mismatch because we built
+    computers as we built today for one purpose they worked really well for the
+    purpose and then we used the same architecture for doing everything else we
+    can do with computing. I think we have today the luxury of going back and
+    rethink how we actually want to build computers and computer architectures,
+    and this is what cognitive computing is all about." - Dr. Horst Simon
+
+    "the purpose of these neumorphic chips is to build systems that do things 
+    efficiently that computers do poorly so current computers are great at
+    adding numbers they can add billion of numbers per second, they are just
+    fantastically fast but they do really poorly at recognizing peoples faces
+    and recognizing objects and other types of things that are brains do really
+    well at. ... the hope is to do recognition tasks in a automatic way." - Dr.
+    John Arthur
+
+    Basically we want the computers to do people-stuff
+
+    Compare this choosing of architecture with the early stages of flying
+    machines, flapping vs. rigid wings
+    
+    There is only two solutions to overcome this performance bottleneck from the
+    core either you put many of them in parallel and try to split the
+    computations among them or you change the processor architecture to better
+    fit the needs.
+
+%============================================================
+
+    Since the dawn of computers the processors has been of von nuemann type
+
+
+    Super scalability
+    * Hardware isn't really catching up with the datasets, clock speed and
+    memory bandwidth has
+    stagnated and the only way to increase the computing power is to increase
+    the number of cores or change the underlying architecture (as in GPU) but 
+    this introduces a lot of new problems one has to re-implement all
+    algorithms for the new setup efficiently which is non trivial in many
+    cases. Mention cache-locks and
+
+    * Hadoop (with Mahong ofc) is the most widely used framework for
+    distributed processing on immense datasets across a cluster. 
+
+    * Non-perfect hardware: many calculations need not to be perfect to be able
+    to operate and some research into this has been done: //REF
+
+\section{A new breed of scientists}
+    Artificial Scientist: 
+    * Use algorithms with active learning on real life experiments for example the
+    microfluid one.
+    * Use an artificial scientist to improve the artificial scientist, OMFG
+
+    * Hardware is a bit  behind, need neurla processors or processors which do
+    errors but the algorithms are errorcorrecting initself, which is closer to
+    neuralprocessing in the neuronnets.
+    * also need other ways of thinking dealing with massive-parallel, refer to
+    bigdata-eventguy which had had the new parallel-databse idea. Most
+    machinelearning algorithms is non-sequencial(is it called this?) but separating
+    the problem in a map-reduce fasion isn't always trivial.
+    * An important piece of the puzzle is to get machinelearning to be scaleable in
+    deeplearning(is this correct usage of deeplearning?) so that we don't have to
+    generate features byhand but instead have raw input with minimal preprocessing
+    (perhaps only log-scaling some raw input you know have a exponential behavour.
+
+    * Or redesigning the hardware it is running on to be optimal to .. (recursive
+    call)
+
+
+"
+Gaetano Borriello, a computer scientist at the University of Washington in
+Seattle, argues that such widely distributed computing power will trigger a
+paradigm shift as great as that brought about by the development of
+experimental science itself. "We will be getting real-time data from the
+physical world for the first time on a large scale."
+" - http://www.nature.com.focus.lib.kth.se/nature/journal/v440/n7083/full/440402a.html
+
+
+
+% outline it in this order: (also check which statements/thoughts are mine vs.
+% from the paper) remember to always have backup references.
+%   
+%   Hardware Limitations
+%       -Introduction: Hardware isn't really catching up with what we want to
+%       compute
+%       -Stagnation in clock speed and memory bandwidth and such for one
+%       processor unit
+%       -Multicore CPU's
+%       -Distributed data/compute systems, both colaborative clusters as well as
+%       -supercomputers.(manycores that is computers running on 100core+).
+%           Compute
+%               Folding@home ("social" computing)
+%           data
+%               ?
+%       -(but the efficient can be as low as 1% <ref>)
+%       -But this is still not optimal for machine learning.
+%       -New non-von neumann<ref:?> architecture
+%           -Look at GPGPU (general purpose computing on graphics processing unit)
+%               -A "new" hardware which focuses more and data throughput<ref:>
+%                and can gain a speedup of 10-100x times compare to running on a
+%                CPU.(just check the examples out, don't link this: http://www.accelereyes.com/examples/case_studies)
+%               -How many top500 computers are running with GPU's?
+%                -And just to mention as a follow up that 2 major API's for
+%                GPGPU has been developed since the release of the main article
+%                (CUDA 08/openCL 09)<ref to official release documents>
+%           -Non-perfect calculations <ref:?>
+%           -Neural processors <ref:Synaptic> would be optimal at least for the
+%           algorithms simulating neural networks (examples of algorithms)
+%      
+%       -New hardware => new algorithms
+%           -Clusters
+%           -For Map-reduce<ref>
+%           -Hadoop with mahong (machine learning algorithms implemented (and
+%           redesigned) to run effectively on clusters)
+%
+%   Artificial Scientist
+%       -Autonomous experimentation
+%       -Feedback to artificial intelligence itself (singularity)
+%           -Genetic programming with a domain specific language like (example)
+%       -Also improve the hardware it runs on
+%       -I really hope we will be careful with the embodiment of these
+%       artificial intelligence's so that we don't end up with Skynet<ref:
+%       terminator> or a smart computer virus with a mind of their own<ref:?>.
+%
+%
+%   Thoughts:
+%       great refs and thoughts on the subject:
+%       http://www.nature.com/nature/focus/futurecomputing/
+%
+
