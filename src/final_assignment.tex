@@ -42,11 +42,12 @@ needed paradigm shift to get there''}
     to the processable size of datasets.
     This sub-exponential growth in computing has been a historical indicator
     that a new paradigm is on it's way which should be the case this time as
-    well or at least there is a need for one.%<ref the_five_paradigm_changes_in_computing>
+    well or at least show that there is a need for one.%<ref the_five_paradigm_changes_in_computing>
     
     The issue with most current hardware systems is their heavy and na\"{i}ve use of the von
-    Neumann architecture. Basically the throughput for this types of processor
-    has started to reach, for physical reasons, the end of the line 
+    Neumann architecture. Basically the throughput for this types of
+    architecture
+    has for physical reasons started to reach the end of the line 
     performance wise.
 
     The duck-tape solution to this has been keeping the von Neumann
@@ -54,33 +55,37 @@ needed paradigm shift to get there''}
     This might work well in some big data applications where the problems is easily
     map-reducible but perform really badly in many other
     problems.\cite{mapreduce} Also
-    this scaling becomes very space and power exhaustive since you have the need for
+    this type of scaling becomes very space and power exhaustive since you have the need for
     cooling of all the cores. 
 
-    The other type of solution is to drop the overused von Neumann architecture
-    and go for something that is much more throughput oriented. In the 2020
-    paper\cite{ms2020} they foresight
+    The only other solution is to just drop the overused von Neumann architecture
+    and go for something which is much more throughput oriented. In the 2020
+    paper\cite{ms2020} foresighted
     \footnote{1 and 2 years before the official 
     announcement of CUDA resp. openCL.} 
-    the use of graphical processing units
-    (GPU) for general computing (GPGPU) that is problems with non graphical nature like
-    solving differential equations or FFT. High end GPU's nowadays have around
-    1500 stream processors in parallel which can perform one type of operation
+    the use of graphical processing units (GPU) for
+    for general computing (GPGPU). General problems in this case is basically 
+    problems with non graphical nature like
+    solving differential equations, FFT or matrix operations. 
+    High end GPU's nowadays have around
+    1500 stream processors in parallel which can perform one type of
+    operation
     (kernel)
     on a 1500-element-chunk of the data in parallel at a time. This together
-    with that use 
-    of a read-only memory which removes the problem of locks
+    with the heavy use 
+    of a read-only memory which removes the problem of memory locks
     and that all the buses are separated for
-    maximum throughput they can in many cases  scale almost linearly 
-    on the number of cores
-    which ordinary CPU's almost never manages.
+    maximum throughput, they can in fact for many suitable cases not only scale almost linearly 
+    on the number of cores but also have a much more effective throughput on
+    the data crunching compared to ordinary CPU's which almost never manages.
 
-    Both scaling up with ordinary CPU's into multi- or manycore as well as
-    GPGPU requires new libraries utilizing new programming paradigms.
+    Both the scaling up with ordinary CPU's into multi- or manycore as well as
+    the GPGPU parallelization requires new libraries utilizing new programming paradigms.
 
-    One possible solution instead of the old classical object oriented
-    programming mostly used today would be to use a pure functional programming
-    language such as
+    For the paradigm shift for software part,
+    one possible solution instead of the old classical object oriented
+    programming mostly used today would be to use a much more higher level and
+    pure functional programming language such as
     for example Haskell. Some data driven companies has
     already conformed to this and are using it as their main language.
     \footnote{
@@ -88,19 +93,32 @@ needed paradigm shift to get there''}
         \href{http://www.ericsson.com}{Ericsson},
         \href{http://www.campanja.com}{Campanja},
     }
+    but in my opinion more companies needs to follow the functional train and
+    instead focus to have libraries and the language itself run much faster.
     The inherited properties that makes functional programming languages 
     preferable is for example the lack of state 
     which makes it lack execution order which in turn makes it
-    trivial to convert it to run it in parallel, since it already run in parallel
-    semantically. Both also the extremely high level of the language with
+    trivial to convert it to run it in parallel in a multi-/manycore cluster
+    or on a GPU, since it already run in parallel on a semantical level.
+    \footnote{The
+    statelessness in functional programming also makes it easier to debug as
+well as much harder to introduce bugs, but that is another story.} 
+    Both also the extremely high level of the language with
     compositions and higher order functions built-in.\cite{haskell}
 
-    But I still think that an entirely new to be developed even if the GPU
-    solves many of the problems.
+    But I still think that an entirely new architecture needs to be developed 
+    even if the GPU solves many of the throughput bottlenecks.
     
-    Probably the easiest way trying to imitate human behavior, which in many
-    cases outperforms computers, is to actually
-    imitate human processing. A new paradigm that has recently emerged is neuromorphic
+    The probably the easiest way in trying to imitate neural behavior, 
+    which in many of the hardest cases outperforms computers, is to actually
+    imitate neural processing. But a question still remains how closely should
+    we imitate neural processing, do we need spiking networks with simulated
+    chemical behavior or could one just stay with special purpose circuits 
+    for convolution networks.
+
+    vissa bra saker som bara egenskaper spiking har, saker den löser, ref nips2012
+
+    A new paradigm that has recently emerged is neuromorphic
     computing which basically tries to mimic neural functions with electronics.
     
     The freshest and most promising according to me is the 
