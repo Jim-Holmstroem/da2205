@@ -102,7 +102,7 @@ needed paradigm shift to get there''}
     or on a GPU, since it already run in parallel on a semantical level.
     \footnote{The
     statelessness in functional programming also makes it easier to debug as
-well as much harder to introduce bugs, but that is another story.} 
+    well as much harder to introduce bugs, but that is another story.} 
     Both also the extremely high level of the language with
     compositions and higher order functions built-in.\cite{haskell}
 
@@ -118,38 +118,56 @@ well as much harder to introduce bugs, but that is another story.}
 
     vissa bra saker som bara egenskaper spiking har, saker den löser, ref nips2012
 
-    A new paradigm that has recently emerged is neuromorphic
+    A new paradigm that recently has emerged is neuromorphic
     computing which basically tries to mimic neural functions with electronics.
     
     The freshest and most promising according to me is the 
     neural processing unit (NPU) which both IBM\cite{synapse} and
-    Intel\cite{intelneuro} are starting develop. Both the approaches avoids being
-    just a monstrous special purpose VHDL-logic chip and can thus be thought of
-    as a new paradigm over neuromorphic computing.
+    Intel\cite{intelneuro} are starting to develop. Both the approaches avoids being
+    just a monstrous special purpose VHDL-logic chip, which we already have
+    seen a few of, and can thus be thought of
+    as a new paradigm in itself going one step further then simple neuromorphic
+    computing but still being one.
 
     Just as for GPGPU's the usage of a NPU's requires a new programming paradigm to
     operate, not much information on the NPU's nor their development tools
-    have been released but I can speculate that it would require some variant of
-    logical- or functional programming. Also the algorithms that fits into the
+    have been released at the moment, but I can speculate that it would
+    require some variant of logical- or/and functional programming. 
+    Also the algorithms that fits into the
     NPU's needs to be greatly rewritten.
     
     Another rather new and interesting neumorphic device is the
     dynamic vision sensor (DVS) which basically has asynchronous event based
-    readout by spiking on color changes.\cite{dvs} It works much more like the human retina and
+    readout by spiking on color changes.\cite{dvs} This in contrast to ordinary
+    cameras which only readout entire image for each timestep. 
+    The DVS works much more like the human retina and
     these properties makes it easier to do 3D reconstruction as well as easily
-    being really fast without using large bandwidth nor much power.
+    being really fast without using large bandwidth nor much power. A results
+    of the extreme sparsity of data one can get more then 50000fps
+    \footnote{In normal conditions, it cannot of course reach this extreme fps
+    if the neurons spikes constantly.}
+    over such a comparably low bandwidth interface as USB.
 
     In addition to all this some more radical improvements in learning
     algorithms has to be made as well. A very recent shift towards deep
     learning algorithms in the machine learning community that probably can be
-    described as a paradigm shift. 
+    described as a paradigm shift. One cannot say for sure until after the
+    breakthrough and this issue is much discussed in the machine learning
+    community. For example it was foresighted that kernel-methods was going to
+    solve everything and before that neural networks.
    
     Much of the recent success in deep learning is due to the new found computing
-    power from 
-    GPU's as I mentioned before as well as a new look on deep learning. A great
-    example the later is dropout algorithm on deep networks which not only
-    outperforms the rest on the podium but also is much less ad hoc by
-    basically only log some of the features.\cite{dropout}
+    power from GPU's \footnote{And Google's 10k computer strong cluster of
+    course.} as I mentioned before as well as a new look 
+    on deep learning. A great
+    example on the later is the new usage of the dropout algorithm on deep networks, 
+    more specifically a convolution network, which not only
+    outperforms the rest on the podium by xx\% compared to yy\% on the 
+    ImageNet dataset.\cite{imagenet}
+    But does it without using any type of ad hoc methods except for log scaling some of the
+    features compare to the competing algorithms that had a long list of state
+    of the art ad hoc's.\cite{dropout} This shows some real promise for deep
+    learning networks.
 
 \section{A new breed of scientists}
     The need of new hardware becomes really apperant both in
@@ -157,8 +175,8 @@ well as much harder to introduce bugs, but that is another story.}
     A few really recent and in many ways successful tries has been made
     like for example: Google's unsupervised catdetector %REF catdetector
     %IBM simulation Synapse (distinguish this with the NPU Synapse)
-    These tries has been run on large clusters blabla but would gain a
-    significant effeciency boost being run on more natural habitat namely the
+    These tries has been ran on large clusters but would gain a
+    significant effeciency boost by being ran on a more natural habitat namely the
     NPU. 
 
 
