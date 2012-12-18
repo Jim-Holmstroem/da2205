@@ -19,10 +19,11 @@ needed paradigm shift to get there''}
 
     It seems that we are currently standing even closer to the brink of a new 
     computer revolution. New machine learning techniques are starting to be 
-    developed and set off into production. At least two big companies I have been working
-    with, Ericcson and Oracle, are starting to consider using machine learning
-    for tasks like for example abnormality detection for inhumanly complex
-    systems with multiple soft
+    developed and set off into production. Cognitive computing is taking form.
+    At least two big companies I have 
+    been working with, Ericsson and Oracle, are starting to consider using 
+    machine learning for tasks like for example abnormality detection for 
+    inhumanly complex systems with multiple soft
     states, classify the different states or different automatic utilities for
     testing software. This among other things results in
     the need of getting massive amounts of computing power.
@@ -44,40 +45,37 @@ needed paradigm shift to get there''}
     that a new paradigm is on it's way which should be the case this time as
     well or at least show that there is a need for one.%<ref the_five_paradigm_changes_in_computing>
     
-    The issue with most current hardware systems is their heavy and na\"{i}ve use of the von
-    Neumann architecture. Basically the throughput for this types of
-    architecture
-    has for physical reasons started to reach the end of the line 
-    performance wise.
+    The issue with most current hardware systems is their heavy and 
+    na\"{i}ve use of the von Neumann architecture. Basically the throughput 
+    for this types of architecture has for physical reasons started to reach 
+    the end of the line performance wise.
 
     The duck-tape solution to this has been keeping the von Neumann
-    architecture, with it's limiting bandwidth, and just throw in more cores and/or more machines in parallel.
-    This might work well in some big data applications where the problems is easily
-    map-reducible but perform really badly in many other
-    problems.\cite{mapreduce} Also
-    this type of scaling becomes very space and power exhaustive since you have the need for
+    architecture, with it's limiting bandwidth, and just throw in more cores 
+    and/or more machines in parallel. This might work well in some big data 
+    applications where the problems is easily map-reducible but perform really 
+    badly in many other problems.\cite{mapreduce} Also this type of scaling 
+    becomes very space and power exhaustive since you have the need for
     cooling of all the cores. 
 
-    The only other solution is to just drop the overused von Neumann architecture
-    and go for something which is much more throughput oriented. In the 2020
-    paper\cite{ms2020} foresighted
-    \footnote{1 and 2 years before the official 
-    announcement of CUDA resp. openCL.} 
-    the use of graphical processing units (GPU) for
-    for general computing (GPGPU). General problems in this case is basically 
-    problems with non graphical nature like
+    The only other solution is to just drop the overused von Neumann 
+    architecture and go for something which is much more throughput oriented. 
+    In the 2020 paper\cite{ms2020} foresighted \footnote{1 and 2 years before 
+    the official announcement of CUDA resp. openCL.} the use of graphical 
+    processing units (GPU) for general computing (GPGPU). General problems in 
+    this case is basically problems with non graphical nature like
     solving differential equations, FFT or matrix operations. 
-    High end GPU's nowadays have around
-    1500 stream processors in parallel which can perform one type of
-    operation
-    (kernel)
-    on a 1500-element-chunk of the data in parallel at a time. This together
-    with the heavy use 
-    of a read-only memory which removes the problem of memory locks
-    and that all the buses are separated for
-    maximum throughput, they can in fact for many suitable cases not only scale almost linearly 
-    on the number of cores but also have a much more effective throughput on
-    the data crunching compared to ordinary CPU's which almost never manages.
+    High end GPU's nowadays have around 1500 stream processors in parallel 
+    which can perform one type of operation (kernel) on a 1500-element-chunk of 
+    the data in parallel at a time. This together with the heavy use 
+    of a read-only memory which removes some of the problems with memory locks
+    or write-after-write and that all the buses are separated for
+    maximum throughput, they can in fact for many suitable cases not only scale
+    almost linearly\footnote{Up to the GPU reaches the memory or instruction
+    throughput max for the device which is much higher then for a CPU in the
+    same price class.} on the number of cores but also have a much more effective 
+    throughput on the data crunching compared to ordinary CPU's which almost 
+    never manages.
 
     Both the scaling up with ordinary CPU's into multi- or manycore as well as
     the GPGPU parallelization requires new libraries utilizing new programming paradigms.
