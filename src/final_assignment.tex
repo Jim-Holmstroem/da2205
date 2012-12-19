@@ -44,12 +44,11 @@ needed paradigm shift to get there''}
     integrated circuits to microprocessors, which should be the case this time as
     well or at least show that there is a need for one at least for artificial
     intelligence and machine learning.
-    %<ref the_five_paradigm_changes_in_computing>
     
     The issue with most current hardware systems is their heavy and 
     na\"{i}ve use of the von Neumann architecture. Basically the throughput 
     for this types of architecture has for physical reasons started to reach 
-    the end of the line performance wise.
+    the end of the line performance wise.\cite{neweraibm}
 
     The duck-tape solution to this has been keeping the von Neumann
     architecture, with it's limiting bandwidth, and just throw in more cores 
@@ -99,8 +98,8 @@ needed paradigm shift to get there''}
     preferable is for example the lack of state 
     which makes it lack execution order which in turn makes it
     trivial to convert it to run it in parallel in a multi-/manycore cluster
-    or on a GPU, since it already run in parallel on a semantical level, called
-    implicit parallelization\cite{something}.
+    or on a GPU, since it already run in parallel on a semantical level 
+    it can be implicit parallelized.\cite{something}
     \footnote{The statelessness in functional programming also makes it easier 
     to debug as well as much harder to introduce bugs, but that is another 
     story.} 
@@ -108,29 +107,49 @@ needed paradigm shift to get there''}
     compositions and higher order functions built-in.\cite{haskell}
 
     But I still think that an entirely new architecture needs to be developed 
-    even if the GPU solves many of the throughput bottlenecks.
-    
+    even if the GPU solves many of the throughput bottlenecks in machine
+    learning.
+
+    ``.. it is comparatively easy to make computers exhibit adult level
+    performance on intelligence tests or playing checkers, and difficult or
+    impossible to give them the skills of a one-year-old when it comes to
+    perception and mobility.''\cite{moravec} which basically shows the main
+    issue namely Moravec's paradox. This still holds and shows that there is a 
+    need for cognitive systems, not only for the great applications but also
+    for understanding the processes in the brain that makes us process
+    information, reason on it and react accordingly. A first step for
+    understanding is to have models that can perform in the same way.
+
     The probably the easiest way in trying to imitate neural behavior, 
     which in many of the hardest cases outperforms computers, is to actually
     imitate neural processing. But a question still remains how closely should
     we imitate neural processing, do we need spiking networks with simulated
     chemical behavior or could one just stay with special purpose circuits 
-    for convolution networks.
+    for convolution networks?
 
-    vissa bra saker som bara egenskaper spiking har, saker den löser, ref nips2012
+    For example having spiking instead of non-spiking would result in a more
+    general network with finer temporal structure in contrast to the 
+    non-spiking which is a approximation where the spiking gets accumulated 
+    over a time. But there could of course be more to this difference that
+    would have a vital effect on for example automatic correlation analysis for
+    the network.
 
     A new paradigm that recently has emerged is neuromorphic
     computing which basically tries to mimic neural functions with electronics.
     
     The freshest and most promising according to me is the 
-    neural processing unit (NPU) which both IBM\cite{synapse} and
+    neural processing unit (NPU)
+    \footnote{Both the term ``neural processing unit'' and the abbreviation is
+    not consistently used in relating communities, but personally I think it
+    fits here.} 
+    which both IBM\cite{synapse} and
     Intel\cite{intelneuro} are starting to develop. Both the approaches avoids 
-    being just a monstrous special purpose VHDL-logic chip, which we already 
-    have seen a few of, and can thus be thought of as a new paradigm in itself 
-    going one step further then simple neuromorphic computing but still being 
-    one.
-
-    http://www.research.ibm.com/new-era-of-computing.shtml 
+    being just a monstrous special purpose VHDL-logic chip,
+    which we already have seen a few of. Those would still be more efficient
+    though but it's not what we want coming out in the other end.
+    These attempts from two giant corporations can thus be thought of as a new 
+    paradigm in itself going one step further then simple neuromorphic 
+    computing but still being one.
 
     Just as for GPGPU's the usage of a NPU's requires a new programming 
     paradigm to operate, not much information on the NPU's nor their 
@@ -147,10 +166,11 @@ needed paradigm shift to get there''}
     these retina properties makes it easier to do for example 3D reconstruction
     or tracking\cite{dvs3D} as well as easily
     being really fast without using large bandwidth nor much power. A results
-    of the extreme sparsity of data one can get more then 50000fps
-    \footnote{In normal conditions, it cannot of course reach this extreme fps
-    if the neurons spikes constantly.}
-    over such a comparably low bandwidth interface as USB.
+    of the extreme sparsity of data one can get well over 50000fps
+    \footnote{Under normal ``real life'' conditions, it cannot of course reach 
+    this extreme fps if the neurons spikes constantly from each pixel.}
+    over such a comparably low bandwidth interface as USB and draw just a few
+    milliwatts of energy.\cite{dvs}
 
     In addition to all this some more radical improvements in learning
     algorithms has to be made as well. A very recent shift towards deep
